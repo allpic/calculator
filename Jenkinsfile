@@ -59,7 +59,7 @@ sh "./gradlew build"
 }
 stage("Docker build") {
 steps {
-sh "docker build -t allpic/calculator ."
+sh "docker build -t localhost:443/xtasy/ubuntu_with_python ."
 }
 }
        stage('echo Docker working') {
