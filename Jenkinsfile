@@ -21,7 +21,7 @@ stage('MutationTesting') {
   steps {
     sh './gradlew pitest'
 publishHTML (target: [
-reportDir: 'build/reports/pitest/html',
+reportDir: 'build/reports/pitest',
 reportFiles: 'index.html',
 reportName: "Pitest Report"
 ])
