@@ -55,5 +55,10 @@ steps {
 sh "docker build -t localhost:443/xtasy/ubuntu_with_python ."
 }
 }
+stage("Docker push") {
+steps {
+sh "docker push localhost:443/xtasy/ubuntu_with_python:1.1"
+}
+}
   }
 }
