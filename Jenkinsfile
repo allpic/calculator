@@ -52,5 +52,15 @@ reportName: "Pitest Report"
                 echo 'Cron task is working !!!'
             }
         }
+stage("Package") {
+steps {
+sh "./gradlew build"
+}
+}
+stage("Docker build") {
+steps {
+sh "docker build -t allpic/calculator ."
+}
+}
   }
 }
