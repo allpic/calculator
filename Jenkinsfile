@@ -55,10 +55,5 @@ steps {
 sh "docker build -t localhost:443/xtasy/ubuntu_with_python ."
 }
 }
-stage("Docker push") {
-steps {
-sh "docker push xtasy/ubuntu_with_python"
-}
-}
   }
 }
