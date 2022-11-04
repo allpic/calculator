@@ -57,7 +57,7 @@ sh "docker build -t localhost:443/xtasy/ubuntu_with_python ."
 }
 stage("docker login") {
 steps {
-sh "docker login localhost:443 --username allpic --password 123456"
+sh "docker login 172.18.0.4:443 --username allpic --password 123456"
   }
 }
 }
