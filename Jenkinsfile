@@ -48,6 +48,8 @@ reportName: "Pitest Report"
         stage('Hello') {
             steps {
                 echo 'Are you ok ?'
+                echo 'Yes'
+                echo 'Cron task is working !!!'
             }
         }
   }
