@@ -17,6 +17,13 @@ reportName: "JaCoCo Report"
 sh "./gradlew jacocoTestCoverageVerification"
 }
 }
+stage('MutationTesting')
+ {
+  steps
+   {
+    sh 'mvn --batch-mode org.pitest:pitest-maven:mutationCoverage'
+   }
+ }
           stage("Compile") {
             steps {
                 sh "./gradlew compileJava"
