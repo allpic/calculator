@@ -73,14 +73,13 @@ stage("Docker push") {
 steps {
 sh "docker push localhost:443/xtasy/ubuntu_with_python:1.1"
        stage('echo Docker push working') {
+}
+}
             steps {
                 echo 'is it ok ?'
                 echo 'Yes'
                 echo 'docker push is working !!!'
             }
         }
-
-}
-}
   }
 }
