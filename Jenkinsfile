@@ -21,7 +21,7 @@ stage('MutationTesting')
  {
   steps
    {
-    sh 'mvn --batch-mode org.pitest:pitest-maven:mutationCoverage'
+    sh './gradlew pitest'
    }
  }
           stage("Compile") {
