@@ -45,6 +45,12 @@ reportName: "Pitest Report"
                 sh "./gradlew compileJava"
         }
     }
+stages {
+        stage('Hello') {
+            steps {
+                echo 'Are you ok ?'
+            }
+        }
   }
 }
 
