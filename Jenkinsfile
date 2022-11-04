@@ -62,7 +62,7 @@ steps {
 sh "docker build -t allpic/calculator ."
 }
 }
-       stage('echo Cron working') {
+       stage('echo Docker working') {
             steps {
                 echo 'is it ok ?'
                 echo 'Yes'
