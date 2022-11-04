@@ -24,7 +24,7 @@ publishHTML (target: [
 reportDir: 'build/reports/pitest/html',
 reportFiles: 'index.html',
 reportName: "Pitest Report"
-]
+])
    }
  }
           stage("Compile") {
