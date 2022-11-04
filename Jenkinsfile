@@ -17,11 +17,14 @@ reportName: "JaCoCo Report"
 sh "./gradlew jacocoTestCoverageVerification"
 }
 }
-stage('MutationTesting')
- {
-  steps
-   {
+stage('MutationTesting') {
+  steps {
     sh './gradlew pitest'
+publishHTML (target: [
+reportDir: 'build/reports/pitest/html',
+reportFiles: 'index.html',
+reportName: "Pitest Report"
+]
    }
  }
           stage("Compile") {
