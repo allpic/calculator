@@ -45,13 +45,6 @@ reportName: "Pitest Report"
                 sh "./gradlew compileJava"
         }
     }
-        stage('echo Cron working') {
-            steps {
-                echo 'Are you ok ?'
-                echo 'Yes'
-                echo 'Cron task is working !!!'
-            }
-        }
 stage("Package") {
 steps {
 sh "./gradlew build"
@@ -62,24 +55,5 @@ steps {
 sh "docker build -t localhost:443/xtasy/ubuntu_with_python ."
 }
 }
-       stage('echo Docker working') {
-            steps {
-                echo 'is it ok ?'
-                echo 'Yes'
-                echo 'docker task is working !!!'
-            }
-        }
-stage("Docker push") {
-steps {
-sh "docker push localhost:443/xtasy/ubuntu_with_python:1.1"
-       stage('echo Docker push working') {
-}
-}
-            steps {
-                echo 'is it ok ?'
-                echo 'Yes'
-                echo 'docker push is working !!!'
-            }
-        }
   }
 }
