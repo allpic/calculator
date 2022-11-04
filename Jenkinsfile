@@ -6,6 +6,11 @@ pipeline {
                 sh "./gradlew test"
         }
     }
+stage("Static code analysis") {
+steps {
+sh "./gradlew checkstyleMain"
+}
+}
 stage("Code coverage") {
 steps {
 sh "./gradlew jacocoTestReport"
