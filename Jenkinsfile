@@ -54,10 +54,3 @@ reportName: "Pitest Report"
         }
   }
 }
-post {
-always {
-mail to: 'team@company.com',
-subject: "Completed Pipeline:${currentBuild.fullDisplayName}",
-body: "Your build completed, please check: ${env.BUILD_URL}"
-}
-}
