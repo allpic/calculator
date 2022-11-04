@@ -45,7 +45,7 @@ reportName: "Pitest Report"
                 sh "./gradlew compileJava"
         }
     }
-        stage('Hello') {
+        stage('echo Cron working') {
             steps {
                 echo 'Are you ok ?'
                 echo 'Yes'
@@ -62,5 +62,13 @@ steps {
 sh "docker build -t allpic/calculator ."
 }
 }
+       stage('echo Cron working') {
+            steps {
+                echo 'is it ok ?'
+                echo 'Yes'
+                echo 'docker task is working !!!'
+            }
+        }
+
   }
 }
